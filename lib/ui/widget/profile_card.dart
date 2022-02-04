@@ -16,6 +16,7 @@ class ProfileCard extends StatelessWidget {
           CircleAvatar(
             radius: 30,
             backgroundImage: AssetImage("assets/34.jpg"),
+            backgroundColor: Palette.primary[50],
           ),
           SizedBox(
             width: 20,
@@ -26,16 +27,17 @@ class ProfileCard extends StatelessWidget {
               children: [
                 Text(
                   "Aria Dwitolio",
-                  style: GoogleFonts.inter(),
+                  style: Theme.of(context)
+                      .textTheme
+                      .subtitle1!
+                      .copyWith(color: Palette.onPrimary),
                 ),
                 SizedBox(height: 10),
-                Text(
-                  "Ketua RW",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 13,
-                  ),
-                ),
+                Text("Ketua RW",
+                    style: Theme.of(context)
+                        .textTheme
+                        .subtitle2!
+                        .copyWith(color: Palette.onPrimary)),
               ],
             ),
           ),
